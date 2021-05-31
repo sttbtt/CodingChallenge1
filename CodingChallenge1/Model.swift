@@ -1,36 +1,14 @@
 //
-//  ContentView.swift
+//  Model.swift
 //  CodingChallenge1
 //
 //  Created by Scott Bennett on 5/29/21.
 //
 
-import SwiftUI
+import Foundation
 
-enum cell: String {
-    case L = "L"
-    case D = "."
-    case A = "#"
-}
-
-struct ContentView: View {
-    
-    
-    @State private var cultures1 = [
-        [cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
-        [cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L],
-        [cell.L,cell.D,cell.L,cell.D,cell.L,cell.D,cell.D,cell.L,cell.D,cell.D],
-        [cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
-        [cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
-        [cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L],
-        [cell.D,cell.D,cell.L,cell.D,cell.L,cell.D,cell.D,cell.D,cell.D,cell.D],
-        [cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
-        [cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L],
-        [cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L]
-        
-    ]
-    
-    @State private var cultures = [
+struct Model {
+    var LargeCulture = [
         [cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
         [cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
         [cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
@@ -128,137 +106,7 @@ struct ContentView: View {
         [cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
         [cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
         [cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L]
+
     ]
     
-    @State private var tempArray: [[cell]] = [[]]
-    @State private var isChanged: Bool = false
-    @State private var hours: Int = 0
-    @State private var switchTest: Bool = true
-    
-    var body: some View {
-        VStack {
-            Text("Cultures")
-            
-            VStack {
-                ForEach(cultures, id: \.self) { array in
-                    HStack {
-                        ForEach(array, id: \.self) { element in
-                            Text(element.rawValue)
-                                .font(.system(.body, design: .monospaced))
-                        }
-                    }
-                }
-            }
-            
-            Button(action: {
-                activate()
-                isChanged = true
-            }, label: {
-                Text("Activate")
-            })
-            .padding()
-            
-            Text("\(hours)")
-            Text(String(isChanged))
-            
-            Button(action: {
-                isChanged = false
-                performTest()
-            }, label: {
-                Text("Continue")
-            })
-            .disabled(!isChanged)
-            .padding()
-            
-        }
-    }
-    
-    
-    func performTest() {
-        //        isChanged = false
-        if switchTest {
-//            isChanged = false
-            crowdingTest()
-        } else {
-//            isChanged = false
-            adjacentTest()
-        }
-        switchTest.toggle()
-    }
-    
-    
-    func activate() {
-        for i in 0..<cultures.count {
-            for j in 0..<cultures[0].count {
-                if cultures[i][j] == cell.L {
-                    cultures[i][j] = cell.A
-                    hours = 1
-                }
-            }
-        }
-    }
-    
-    
-    func crowdingTest() {
-        
-        tempArray = cultures
-        
-        for i in 0..<cultures.count {
-            for j in 0..<cultures[0].count {
-                if cultures[i][j] == cell.D { continue }
-                
-                if checkCount(i: i, j: j) >= 4 && tempArray[i][j] != cell.L {
-                    tempArray[i][j] = cell.L
-                    isChanged = true
-                }
-            }
-        }
-        
-        cultures = tempArray
-        hours += 1
-    }
-    
-    
-    func adjacentTest() {
-        
-        tempArray = cultures
-        
-        for i in 0..<cultures.count {
-            for j in 0..<cultures[0].count {
-                if cultures[i][j] == cell.D { continue }
-                
-                if checkCount(i: i, j: j) == 0 && tempArray[i][j] != cell.A {
-                    tempArray[i][j] = cell.A
-                    isChanged = true
-                }
-            }
-        }
-        
-        cultures = tempArray
-        hours += 1
-    }
-    
-    
-    func checkCount(i: Int, j: Int) -> Int {
-        
-        var testArray: [cell] = []
-        
-        testArray.append(i == 0 || j == 0 ? cell.D : cultures[i - 1][j - 1])
-        testArray.append(j == 0 ? cell.D : cultures[i][j - 1])
-        testArray.append(i == (cultures.count - 1) || j == 0 ? cell.D : cultures[i + 1][j - 1])
-        testArray.append(i == 0 ? cell.D : cultures[i - 1][j])
-        testArray.append(i == (cultures.count - 1) ? cell.D : cultures[i + 1]   [j])
-        testArray.append(i == 0 || j == (cultures[0].count - 1) ? cell.D : cultures[i - 1][j + 1])
-        testArray.append(j == (cultures[0].count - 1) ? cell.D : cultures[i][j + 1])
-        testArray.append(i == (cultures.count - 1) || j == (cultures[0].count - 1) ? cell.D : cultures[i + 1][j + 1])
-        
-        return testArray.filter{ $0 == cell.A }.count
-    }
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
 }
