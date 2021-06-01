@@ -124,6 +124,9 @@ struct ContentView: View {
     @State private var liveRatio: Double = 0
     @State private var switchTest: Bool = true
     
+    var bgColor = Color("AppPrimary")
+    var fgColor = Color("AppSecondary")
+    
     var iterations = 0
     
     var body: some View {
@@ -151,10 +154,13 @@ struct ContentView: View {
             }, label: {
                 Text("Activate")
             })
-            .padding()
+            .frame(width: 100, height: 30)
+            .foregroundColor(.orange)
+            .background(Color(UIColor.systemFill))
+            .cornerRadius(10)
             
             Button(action: {
-                for _ in 1... {
+                for _ in 0... {
                     if !isChanged { break }
                     isChanged = false
                     performTest()
@@ -165,6 +171,10 @@ struct ContentView: View {
                 Text("Grow")
             })
             .disabled(!isChanged)
+            .frame(width: 100, height: 30)
+            .foregroundColor(isChanged ? .orange : .gray)
+            .background(Color(UIColor.systemFill))
+            .cornerRadius(10)
             .padding()
             
             Text("Hours: \(hours)")
@@ -186,7 +196,6 @@ struct ContentView: View {
             if isChanged {
                 hours += 1
             }
-        
     }
     
     
@@ -196,6 +205,9 @@ struct ContentView: View {
                 if cultures[i][j] == cell.L {
                     cultures[i][j] = cell.A
                     hours = 1
+                    liveRatio = 0
+                    liveCultures = 0
+                    tempArray = [[]]
                 }
             }
         }
