@@ -11,7 +11,6 @@
 		F1B031EA2662F3B6007CA366 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E92662F3B6007CA366 /* ContentView.swift */; };
 		F1B031EC2662F3B7007CA366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B031EB2662F3B7007CA366 /* Assets.xcassets */; };
 		F1B031EF2662F3B7007CA366 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B031EE2662F3B7007CA366 /* Preview Assets.xcassets */; };
-		F1B031F72662F404007CA366 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031F62662F404007CA366 /* Model.swift */; };
 		F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */; };
 		F1B031FF2665B217007CA366 /* cell-cultures-large.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1B031FE2665B217007CA366 /* cell-cultures-large.txt */; };
 		F1B032012665D77D007CA366 /* cell-cultures-test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1B032002665D77D007CA366 /* cell-cultures-test.txt */; };
@@ -24,7 +23,6 @@
 		F1B031EB2662F3B7007CA366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B031EE2662F3B7007CA366 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1B031F02662F3B7007CA366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1B031F62662F404007CA366 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyles.swift; sourceTree = "<group>"; };
 		F1B031FE2665B217007CA366 /* cell-cultures-large.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cell-cultures-large.txt"; sourceTree = "<group>"; };
 		F1B032002665D77D007CA366 /* cell-cultures-test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cell-cultures-test.txt"; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 		F1B031FB2665B17B007CA366 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F1B031F62662F404007CA366 /* Model.swift */,
 				F1B031FE2665B217007CA366 /* cell-cultures-large.txt */,
 				F1B032002665D77D007CA366 /* cell-cultures-test.txt */,
 			);
@@ -184,7 +181,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1B031F72662F404007CA366 /* Model.swift in Sources */,
 				F1B031EA2662F3B6007CA366 /* ContentView.swift in Sources */,
 				F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */,
 				F1B031E82662F3B6007CA366 /* CodingChallenge1App.swift in Sources */,
