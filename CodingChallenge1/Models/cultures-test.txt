@@ -1,0 +1,10 @@
+[cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
+[cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L],
+[cell.L,cell.D,cell.L,cell.D,cell.L,cell.D,cell.D,cell.L,cell.D,cell.D],
+[cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
+[cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L,cell.D,cell.L,cell.L],
+[cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L],
+[cell.D,cell.D,cell.L,cell.D,cell.L,cell.D,cell.D,cell.D,cell.D,cell.D],
+[cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L],
+[cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L],
+[cell.L,cell.D,cell.L,cell.L,cell.L,cell.L,cell.L,cell.D,cell.L,cell.L]
