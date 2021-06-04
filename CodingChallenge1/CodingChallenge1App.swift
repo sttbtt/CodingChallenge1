@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CodingChallenge1App: App {
+    
+    @StateObject var cellManager = CellManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CellView(cellManager: cellManager)
         }
     }
 }

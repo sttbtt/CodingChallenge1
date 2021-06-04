@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Cell: String {
+enum Cell: String, Equatable {
     case L = "L"
     case D = "."
     case A = "#"

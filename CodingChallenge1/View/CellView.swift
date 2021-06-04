@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CellView: View {
     
-    @ObservedObject var manager = CellManager()
-    
-    @State private var isAnimating: Bool = false
-    
-    var bgColor = Color("AppPrimary")
-    var fgColor = Color("AppSecondary")
-    
-    var iterations = 0
+    @ObservedObject var cellManager: CellManager
     
     var body: some View {
         VStack {
@@ -24,7 +17,7 @@ struct ContentView: View {
             
             ScrollView([.horizontal, .vertical]) {
                 VStack {
-                    ForEach(manager.cells, id: \.self) { array in
+                    ForEach(cellManager.cells, id: \.self) { array in
                         HStack {
                             ForEach(array, id: \.self) { element in
                                 Text(element.rawValue)
@@ -39,8 +32,8 @@ struct ContentView: View {
             HStack {
                 VStack {
                     Button(action: {
-                        manager.activate()
-                        manager.isChanged = true
+                        cellManager.activate()
+                        cellManager.isChanged = true
                     }, label: {
                         Text("Activate")
                     })
@@ -50,29 +43,23 @@ struct ContentView: View {
                     .cornerRadius(10)
                     
                     Button(action: {
-                        for _ in 0... {
-                            if !manager.isChanged { break }
-                            manager.isChanged = false
-                            manager.performTest()
-                        }
-                        manager.answers()
-                        
+                        cellManager.growCells()
                     }, label: {
                         Text("Grow")
                     })
-                    .disabled(!manager.isChanged)
+                    .disabled(!cellManager.isChanged)
                     .frame(width: 100, height: 30)
-                    .foregroundColor(manager.isChanged ? .orange : .gray)
+                    .foregroundColor(cellManager.isChanged ? .orange : .gray)
                     .background(Color(UIColor.systemFill))
                     .cornerRadius(10)
                     .padding()
                     
-                    Text("Hours: \(manager.hours)")
-                    Text("Live Cultures: \(manager.liveCultures)")
-                    Text("Live/Livable Spaces: \(manager.liveRatio, specifier: "%.2f")%")
+                    Text("Hours: \(cellManager.hours)")
+                    Text("Live Cultures: \(cellManager.liveCultures)")
+                    Text("Live/Livable Spaces: \(cellManager.liveRatio, specifier: "%.2f")%")
                 }
                 
-                ActivityIndicator(isAnimating: isAnimating)
+                ActivityIndicator(isAnimating: cellManager.isAnimating)
             }
         }
     }
@@ -81,6 +68,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CellView(cellManager: CellManager())
     }
 }

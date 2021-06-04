@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F16BFD53266A999700793A57 /* Coding Challenge 1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F16BFD52266A999600793A57 /* Coding Challenge 1.pdf */; };
+		F16BFD55266A99AE00793A57 /* cell-cultures.txt in Resources */ = {isa = PBXBuildFile; fileRef = F16BFD54266A99AE00793A57 /* cell-cultures.txt */; };
 		F18166112667DEA2001C947B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18166102667DEA2001C947B /* ActivityIndicator.swift */; };
 		F1816671266998CE001C947B /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1816670266998CE001C947B /* CellManager.swift */; };
 		F181667326699984001C947B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181667226699984001C947B /* Cell.swift */; };
 		F1B031E82662F3B6007CA366 /* CodingChallenge1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E72662F3B6007CA366 /* CodingChallenge1App.swift */; };
-		F1B031EA2662F3B6007CA366 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E92662F3B6007CA366 /* ContentView.swift */; };
+		F1B031EA2662F3B6007CA366 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E92662F3B6007CA366 /* CellView.swift */; };
 		F1B031EC2662F3B7007CA366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B031EB2662F3B7007CA366 /* Assets.xcassets */; };
 		F1B031EF2662F3B7007CA366 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B031EE2662F3B7007CA366 /* Preview Assets.xcassets */; };
 		F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */; };
@@ -25,12 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F16BFD52266A999600793A57 /* Coding Challenge 1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Coding Challenge 1.pdf"; sourceTree = "<group>"; };
+		F16BFD54266A99AE00793A57 /* cell-cultures.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cell-cultures.txt"; sourceTree = "<group>"; };
 		F18166102667DEA2001C947B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		F1816670266998CE001C947B /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
 		F181667226699984001C947B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F1B031E42662F3B6007CA366 /* CodingChallenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingChallenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B031E72662F3B6007CA366 /* CodingChallenge1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallenge1App.swift; sourceTree = "<group>"; };
-		F1B031E92662F3B6007CA366 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F1B031E92662F3B6007CA366 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		F1B031EB2662F3B7007CA366 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1B031EE2662F3B7007CA366 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1B031F02662F3B7007CA366 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		F1B031DB2662F3B6007CA366 = {
 			isa = PBXGroup;
 			children = (
+				F16BFD52266A999600793A57 /* Coding Challenge 1.pdf */,
 				F1B031E62662F3B6007CA366 /* CodingChallenge1 */,
 				F1B031E52662F3B6007CA366 /* Products */,
 			);
@@ -75,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				F1B031E72662F3B6007CA366 /* CodingChallenge1App.swift */,
-				F1B031FB2665B17B007CA366 /* Models */,
-				F1B031FA2665B16F007CA366 /* Views */,
-				F1B031FC2665B184007CA366 /* View Models */,
+				F1B031FB2665B17B007CA366 /* Model */,
+				F1B031FA2665B16F007CA366 /* View */,
+				F1B031FC2665B184007CA366 /* View Model */,
 				F1B031FD2665B1B2007CA366 /* Style Guide */,
 				F1B031EB2662F3B7007CA366 /* Assets.xcassets */,
 				F1B031F02662F3B7007CA366 /* Info.plist */,
@@ -94,31 +99,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		F1B031FA2665B16F007CA366 /* Views */ = {
+		F1B031FA2665B16F007CA366 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F1B031E92662F3B6007CA366 /* ContentView.swift */,
+				F1B031E92662F3B6007CA366 /* CellView.swift */,
 				F18166102667DEA2001C947B /* ActivityIndicator.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		F1B031FB2665B17B007CA366 /* Models */ = {
+		F1B031FB2665B17B007CA366 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F16BFD54266A99AE00793A57 /* cell-cultures.txt */,
 				F1B031FE2665B217007CA366 /* cell-cultures-large.txt */,
 				F1B032002665D77D007CA366 /* cell-cultures-test.txt */,
 				F181667226699984001C947B /* Cell.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		F1B031FC2665B184007CA366 /* View Models */ = {
+		F1B031FC2665B184007CA366 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
 				F1816670266998CE001C947B /* CellManager.swift */,
 			);
-			path = "View Models";
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 		F1B031FD2665B1B2007CA366 /* Style Guide */ = {
@@ -194,7 +200,9 @@
 				F1B031FF2665B217007CA366 /* cell-cultures-large.txt in Resources */,
 				F1B031EF2662F3B7007CA366 /* Preview Assets.xcassets in Resources */,
 				F1B031EC2662F3B7007CA366 /* Assets.xcassets in Resources */,
+				F16BFD55266A99AE00793A57 /* cell-cultures.txt in Resources */,
 				F1B032012665D77D007CA366 /* cell-cultures-test.txt in Resources */,
+				F16BFD53266A999700793A57 /* Coding Challenge 1.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1B031EA2662F3B6007CA366 /* ContentView.swift in Sources */,
+				F1B031EA2662F3B6007CA366 /* CellView.swift in Sources */,
 				F1CC91812666AD79004840D6 /* StyleGuideShadows.swift in Sources */,
 				F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */,
 				F1CC917E2666AD79004840D6 /* StyleGuideButton.swift in Sources */,
