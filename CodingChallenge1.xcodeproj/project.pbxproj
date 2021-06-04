@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F18166112667DEA2001C947B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18166102667DEA2001C947B /* ActivityIndicator.swift */; };
+		F1816671266998CE001C947B /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1816670266998CE001C947B /* CellManager.swift */; };
+		F181667326699984001C947B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F181667226699984001C947B /* Cell.swift */; };
 		F1B031E82662F3B6007CA366 /* CodingChallenge1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E72662F3B6007CA366 /* CodingChallenge1App.swift */; };
 		F1B031EA2662F3B6007CA366 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031E92662F3B6007CA366 /* ContentView.swift */; };
 		F1B031EC2662F3B7007CA366 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1B031EB2662F3B7007CA366 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F18166102667DEA2001C947B /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		F1816670266998CE001C947B /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		F181667226699984001C947B /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		F1B031E42662F3B6007CA366 /* CodingChallenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingChallenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B031E72662F3B6007CA366 /* CodingChallenge1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingChallenge1App.swift; sourceTree = "<group>"; };
 		F1B031E92662F3B6007CA366 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				F1B031E92662F3B6007CA366 /* ContentView.swift */,
+				F18166102667DEA2001C947B /* ActivityIndicator.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 			children = (
 				F1B031FE2665B217007CA366 /* cell-cultures-large.txt */,
 				F1B032002665D77D007CA366 /* cell-cultures-test.txt */,
+				F181667226699984001C947B /* Cell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 		F1B031FC2665B184007CA366 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				F1816670266998CE001C947B /* CellManager.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -202,7 +211,10 @@
 				F1CC917E2666AD79004840D6 /* StyleGuideButton.swift in Sources */,
 				F1CC91792666AD79004840D6 /* StyleGuidetypography.swift in Sources */,
 				F1CC91802666AD79004840D6 /* StyleGuideColors.swift in Sources */,
+				F181667326699984001C947B /* Cell.swift in Sources */,
 				F1B031E82662F3B6007CA366 /* CodingChallenge1App.swift in Sources */,
+				F18166112667DEA2001C947B /* ActivityIndicator.swift in Sources */,
+				F1816671266998CE001C947B /* CellManager.swift in Sources */,
 				F1CC917A2666AD79004840D6 /* StyleGuideCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
