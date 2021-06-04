@@ -1,6 +1,5 @@
 //
 //  StyleGuideCard.swift
-//  DesignProject
 //
 //  Created by Scott Bennett on 5/9/21.
 //

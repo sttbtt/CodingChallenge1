@@ -1,6 +1,5 @@
 //
 //  StyleGuideButton.swift
-//  DesignProject
 //
 //  Created by Scott Bennett on 5/11/21.
 //

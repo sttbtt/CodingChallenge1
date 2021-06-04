@@ -1,6 +1,5 @@
 //
-//  StyleGuidetypography.swift
-//  DesignProject
+//  StyleGuideTypography.swift
 //
 //  Created by Scott Bennett on 5/10/21.
 //
