@@ -19,10 +19,6 @@
 		F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */; };
 		F1B031FF2665B217007CA366 /* cell-cultures-large.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1B031FE2665B217007CA366 /* cell-cultures-large.txt */; };
 		F1B032012665D77D007CA366 /* cell-cultures-test.txt in Resources */ = {isa = PBXBuildFile; fileRef = F1B032002665D77D007CA366 /* cell-cultures-test.txt */; };
-		F1CC91792666AD79004840D6 /* StyleGuideTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC916E2666AD78004840D6 /* StyleGuideTypography.swift */; };
-		F1CC917A2666AD79004840D6 /* StyleGuideCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC916F2666AD78004840D6 /* StyleGuideCard.swift */; };
-		F1CC917E2666AD79004840D6 /* StyleGuideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC91732666AD79004840D6 /* StyleGuideButton.swift */; };
-		F1CC91802666AD79004840D6 /* StyleGuideColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC91752666AD79004840D6 /* StyleGuideColors.swift */; };
 		F1CC91812666AD79004840D6 /* StyleGuideShadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC91762666AD79004840D6 /* StyleGuideShadows.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,10 +37,6 @@
 		F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonStyles.swift; sourceTree = "<group>"; };
 		F1B031FE2665B217007CA366 /* cell-cultures-large.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cell-cultures-large.txt"; sourceTree = "<group>"; };
 		F1B032002665D77D007CA366 /* cell-cultures-test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "cell-cultures-test.txt"; sourceTree = "<group>"; };
-		F1CC916E2666AD78004840D6 /* StyleGuideTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuideTypography.swift; sourceTree = "<group>"; };
-		F1CC916F2666AD78004840D6 /* StyleGuideCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuideCard.swift; sourceTree = "<group>"; };
-		F1CC91732666AD79004840D6 /* StyleGuideButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuideButton.swift; sourceTree = "<group>"; };
-		F1CC91752666AD79004840D6 /* StyleGuideColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuideColors.swift; sourceTree = "<group>"; };
 		F1CC91762666AD79004840D6 /* StyleGuideShadows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleGuideShadows.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,11 +122,7 @@
 		F1B031FD2665B1B2007CA366 /* Style Guide */ = {
 			isa = PBXGroup;
 			children = (
-				F1CC91732666AD79004840D6 /* StyleGuideButton.swift */,
-				F1CC916F2666AD78004840D6 /* StyleGuideCard.swift */,
-				F1CC91752666AD79004840D6 /* StyleGuideColors.swift */,
 				F1CC91762666AD79004840D6 /* StyleGuideShadows.swift */,
-				F1CC916E2666AD78004840D6 /* StyleGuideTypography.swift */,
 				F1B031F8266558AB007CA366 /* CustomButtonStyles.swift */,
 			);
 			path = "Style Guide";
@@ -216,14 +204,10 @@
 				F1B031EA2662F3B6007CA366 /* CellView.swift in Sources */,
 				F1CC91812666AD79004840D6 /* StyleGuideShadows.swift in Sources */,
 				F1B031F9266558AB007CA366 /* CustomButtonStyles.swift in Sources */,
-				F1CC917E2666AD79004840D6 /* StyleGuideButton.swift in Sources */,
-				F1CC91792666AD79004840D6 /* StyleGuideTypography.swift in Sources */,
-				F1CC91802666AD79004840D6 /* StyleGuideColors.swift in Sources */,
 				F181667326699984001C947B /* Cell.swift in Sources */,
 				F1B031E82662F3B6007CA366 /* CodingChallenge1App.swift in Sources */,
 				F18166112667DEA2001C947B /* ActivityIndicator.swift in Sources */,
 				F1816671266998CE001C947B /* CellManager.swift in Sources */,
-				F1CC917A2666AD79004840D6 /* StyleGuideCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

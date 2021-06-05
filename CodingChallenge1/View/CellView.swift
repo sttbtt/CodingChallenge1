@@ -28,38 +28,30 @@ struct CellView: View {
                 }
             }
             .padding()
-            
-            HStack {
-                VStack {
-                    Button(action: {
-                        cellManager.activate()
-                        cellManager.isChanged = true
-                    }, label: {
-                        Text("Activate")
-                    })
-                    .frame(width: 100, height: 30)
-                    .foregroundColor(.orange)
-                    .background(Color(UIColor.systemFill))
-                    .cornerRadius(10)
-                    
-                    Button(action: {
-                        cellManager.growCells()
-                    }, label: {
-                        Text("Grow")
-                    })
-                    .disabled(!cellManager.isChanged)
-                    .frame(width: 100, height: 30)
-                    .foregroundColor(cellManager.isChanged ? .orange : .gray)
-                    .background(Color(UIColor.systemFill))
-                    .cornerRadius(10)
-                    .padding()
-                    
-                    Text("Hours: \(cellManager.hours)")
-                    Text("Live Cultures: \(cellManager.liveCultures)")
-                    Text("Live/Livable Spaces: \(cellManager.liveRatio, specifier: "%.2f")%")
-                }
+
+            VStack {
+                Button(action: {
+                    cellManager.activate()
+                    cellManager.isChanged = true
+                }, label: {
+                    Text("Activate")
+                })
+                .buttonStyle(FilledRoundedCornerButtonStyle(isDisabled: false))
+                .eShadow()
                 
-                ActivityIndicator(isAnimating: cellManager.isAnimating)
+                Button(action: {
+                    cellManager.growCells()
+                }, label: {
+                    Text("Grow")
+                })
+                .buttonStyle(FilledRoundedCornerButtonStyle(isDisabled: !cellManager.isChanged))
+                .eShadow()
+                .disabled(!cellManager.isChanged)
+                .padding()
+                
+                Text("Hours: \(cellManager.hours)")
+                Text("Live Cultures: \(cellManager.liveCultures)")
+                Text("Live/Livable Spaces: \(cellManager.liveRatio, specifier: "%.2f")%")
             }
         }
     }

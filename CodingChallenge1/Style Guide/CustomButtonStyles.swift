@@ -8,8 +8,10 @@ import SwiftUI
 
 struct FilledRoundedCornerButtonStyle: ButtonStyle {
     
+    let isDisabled: Bool
+    
     var font: Font = .title
-    var padding: CGFloat = 8
+    var padding: CGFloat = 10
     var bgColor = Color("AppPrimary")
     var fgColor = Color("AppSecondary")
     var cornerRadius: CGFloat = 8
@@ -19,7 +21,7 @@ struct FilledRoundedCornerButtonStyle: ButtonStyle {
             .font(font)
             .padding(padding)
             .background(bgColor)
-            .foregroundColor(fgColor)
+            .foregroundColor(isDisabled ? .gray : fgColor)
             .cornerRadius(cornerRadius)
             .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
             .animation(.spring())

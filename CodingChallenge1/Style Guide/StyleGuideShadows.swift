@@ -16,6 +16,10 @@ extension View {
     public func cShadow() -> some View {
         modifier(CShadow())
     }
+    
+    public func eShadow() -> some View {
+        modifier(EShadow(elevation: .middle))
+    }
 }
 
 enum Elevation {
