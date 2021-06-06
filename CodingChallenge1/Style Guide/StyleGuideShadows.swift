@@ -44,25 +44,3 @@ struct EShadow: ViewModifier {
         }
     }
 }
-
-//struct StyleGuideShadows: View {
-//    var body: some View {
-//        VStack {
-//            Text("Shadow Style Guide")
-//            RectangleTestView()
-//                .modifier(CShadow())
-//
-//            RectangleTestView()
-//                .cShadow()
-//
-//            RectangleTestView()
-//                .modifier(EShadow(elevation: .middle))
-//        }
-//    }
-//}
-//
-//struct StyleGuideShadows_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StyleGuideShadows()
-//    }
-//}
