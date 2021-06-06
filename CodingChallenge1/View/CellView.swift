@@ -17,19 +17,22 @@ struct CellView: View {
             
             ScrollView([.horizontal, .vertical]) {
                 VStack {
-                    ForEach(cellManager.cells, id: \.self) { array in
-                        HStack {
-                            ForEach(array, id: \.self) { element in
-                                Text(element.rawValue)
-                                    .font(.system(.body, design: .monospaced))
-                            }
-                        }
-                    }
+                    Text(cellManager.cellText)
+                        .font(.system(.body, design: .monospaced))
+                    
+//                    ForEach(cellManager.cells, id: \.self) { array in
+//                        HStack {
+//                            ForEach(array, id: \.self) { element in
+//                                Text(element.rawValue)
+//                                    .font(.system(.body, design: .monospaced))
+//                            }
+//                        }
+//                    }
                 }
             }
             .padding()
 
-            VStack {
+            VStack(spacing: 20) {
                 Button(action: {
                     cellManager.activate()
                     cellManager.isChanged = true
@@ -44,14 +47,15 @@ struct CellView: View {
                 }, label: {
                     Text("Grow")
                 })
+                .disabled(!cellManager.isChanged)
                 .buttonStyle(FilledRoundedCornerButtonStyle(isDisabled: !cellManager.isChanged))
                 .eShadow()
-                .disabled(!cellManager.isChanged)
-                .padding()
                 
-                Text("Hours: \(cellManager.hours)")
-                Text("Live Cultures: \(cellManager.liveCultures)")
-                Text("Live/Livable Spaces: \(cellManager.liveRatio, specifier: "%.2f")%")
+                VStack {
+                    Text("Hours: \(cellManager.hours)")
+                    Text("Live Cultures: \(cellManager.liveCultures)")
+                    Text("Live/Livable Spaces: \(cellManager.liveRatio, specifier: "%.2f")%")
+                }
             }
         }
     }

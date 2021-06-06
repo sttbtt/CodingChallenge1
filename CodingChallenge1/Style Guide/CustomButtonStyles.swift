@@ -11,7 +11,7 @@ struct FilledRoundedCornerButtonStyle: ButtonStyle {
     let isDisabled: Bool
     
     var font: Font = .title
-    var padding: CGFloat = 10
+    var padding: CGFloat = 0
     var bgColor = Color(.secondarySystemFill)
     var fgColor = Color(.orange)
     var cornerRadius: CGFloat = 8
@@ -19,7 +19,7 @@ struct FilledRoundedCornerButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(font)
-//            .padding(padding)
+            .padding(padding)
             .frame(width: 200, height: 40, alignment: .center)
             .background(bgColor)
             .foregroundColor(isDisabled ? .gray : fgColor)

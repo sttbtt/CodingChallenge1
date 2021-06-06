@@ -7,6 +7,7 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class CellManager: ObservableObject {
     
@@ -16,12 +17,20 @@ class CellManager: ObservableObject {
     @Published var hours: Int = 0
     @Published var isChanged: Bool = false
     @Published var isAnimating: Bool = false
+    @Published var cellText: String = ""
+    
+    @State var largeTest: Bool = true
     
     var tempArray: [[Cell]] = [[]]
     var switchTest: Bool = true
-    var largeTest: Bool = false
     
     init() {
+        loadCells()
+        arrayToText()
+    }
+    
+    
+    func loadCells() {
         cells = largeTest ? CellData.init().largeArray : CellData.init().smallArray
         tempArray = cells
     }
@@ -41,6 +50,7 @@ class CellManager: ObservableObject {
             }
         }
         cells = tempArray
+        arrayToText()
     }
     
     
@@ -50,6 +60,7 @@ class CellManager: ObservableObject {
             isChanged = false
             performTest()
         }
+        arrayToText()
         answers()
     }
     
@@ -69,7 +80,6 @@ class CellManager: ObservableObject {
     
     
     func crowdingTest() {
-        
         for i in 0..<cells.count {
             for j in 0..<cells[0].count {
                 if cells[i][j] == Cell.D { continue }
@@ -86,7 +96,6 @@ class CellManager: ObservableObject {
     
     
     func adjacentTest() {
-        
         for i in 0..<cells.count {
             for j in 0..<cells[0].count {
                 if cells[i][j] == Cell.D { continue }
@@ -99,6 +108,20 @@ class CellManager: ObservableObject {
         }
         
         cells = tempArray
+    }
+    
+    
+    func arrayToText() {
+        var tempText: String = ""
+        
+        for i in 0..<cells.count {
+            for j in 0..<cells[0].count {
+                tempText = tempText + cells[i][j].rawValue
+            }
+            tempText = tempText + "\n"
+        }
+        
+        cellText = tempText
     }
     
     
