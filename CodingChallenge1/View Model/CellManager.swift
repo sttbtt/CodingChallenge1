@@ -19,7 +19,7 @@ class CellManager: ObservableObject {
     
     var tempArray: [[Cell]] = [[]]
     var switchTest: Bool = true
-    var largeTest: Bool = true
+    var largeTest: Bool = false
     
     init() {
         cells = largeTest ? CellData.init().largeArray : CellData.init().smallArray
